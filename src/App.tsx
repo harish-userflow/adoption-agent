@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, ReactNode } from "react";
 
 const T = {
   bg: "#F7F8FC",
@@ -22,7 +22,7 @@ const T = {
   sbBrd: "rgba(255,255,255,0.07)",
 };
 
-const Tag = ({ c = "gray", children }) => {
+const Tag = ({ c = "gray", children }: { c?: string; children: ReactNode }) => {
   const m = {
     green: { bg: T.gL, col: T.gT },
     amber: { bg: T.aL, col: T.aT },
